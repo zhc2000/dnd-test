@@ -707,7 +707,7 @@
                 card.innerHTML = `
                     <div class="spell-header">
                         <div class="spell-name">${spell.name_cn}</div>
-                        <div class="spell-level"><span class="level-tag ${levelClass}">${spell.level === 'cantrip' ? '戏法' : spell.level + '环'}</span></div>
+                        <div class="spell-level"><span class="level-tag ${levelClass}">${spell.level === 'cantrip' ? '戏法' : spell.level }</span></div>
                     </div>
                     <div class="spell-body">
                         <div class="spell-meta">
@@ -715,7 +715,7 @@
                                 <i class="fas fa-book"></i> <span>${spell.school}</span>
                             </div>
                             <div class="meta-item">
-                                <i class="fas fa-fire"></i> <span>${spell.level === 'cantrip' ? '戏法' : spell.level + '环'}</span>
+                                <i class="fas fa-fire"></i> <span>${spell.level === 'cantrip' ? '戏法' : spell.level}</span>
                             </div>
                         </div>
                         <div class="spell-desc">${spell.description.substring(0, 100)}${spell.description.length > 100 ? '...' : ''}</div>
