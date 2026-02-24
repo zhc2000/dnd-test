@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DND 5e 法术查询系统</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --primary-dark: #3a5a80;
+            --secondary: #e74c3c;
+            --accent: #f39c12;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #27ae60;
+            --gray: #6c757d;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            padding: 20px;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        h1 i {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .search-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+        }
+
+        .search-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .search-header h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .search-header h2 i {
+            color: var(--accent);
+        }
+
+        .search-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .search-group {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .search-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .search-group input,
+        .search-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .search-group input:focus,
+        .search-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.2);
+        }
+
+        .results-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .results-header h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .results-count {
+            background: var(--primary);
+            color: white;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .spells-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .spell-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            background: white;
+            height: 100%;
+        }
+
+        .spell-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .spell-header {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        .spell-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+
+        .spell-level {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .spell-body {
+            padding: 20px;
+        }
+
+        .spell-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.9rem;
+        }
+
+        .meta-item i {
+            color: var(--accent);
+        }
+
+        .spell-desc {
+            color: var(--gray);
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .spell-footer {
+            text-align: center;
+        }
+
+        .level-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .cantrip {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .level-1 {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .level-2 {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .level-3 {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .level-4 {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .level-5 {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .level-6 {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+
+        .level-7 {
+            background: #e2e3e5;
+            color: #383d41;
+        }
+
+        .level-8 {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .level-9 {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 50px rgba(0,0,0,0.3);
+            position: relative;
+            padding: 30px;
+            margin: 0 auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .modal-title {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--secondary);
+        }
+
+        .modal-body {
+            line-height: 1.7;
+        }
+
+        .modal-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .modal-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--gray);
+        }
+
+        .modal-meta-item i {
+            color: var(--accent);
+        }
+
+        .modal-description {
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .modal-higher-level {
+            background: #f8f9fa;
+            border-left: 4px solid var(--accent);
+            padding: 15px 20px;
+            border-radius: 0 4px 4px 0;
+            margin-top: 25px;
+        }
+
+        .modal-higher-level h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .no-results i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: #adb5bd;
+        }
+
+        @media (max-width: 768px) {
+            .spells-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .spells-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .search-group {
+                min-width: 100%;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-magic"></i> DND 5e 法术查询系统</h1>
+            <p class="subtitle">轻松查询所有DND 5e法术，按名称、环阶、学派等条件搜索，查看详细信息</p>
+        </header>
+
+        <div class="search-container">
+            <div class="search-header">
+                <h2><i class="fas fa-search"></i> 法术搜索</h2>
+                <div class="search-options">
+                    <div class="search-group">
+                        <label for="name-search">法术名称</label>
+                        <input type="text" id="name-search" placeholder="输入法术名称...">
+                    </div>
+                    <div class="search-group">
+                        <label for="level-search">环阶</label>
+                        <select id="level-search">
+                            <option value="">全部环阶</option>
+                            <option value="cantrip">戏法</option>
+                            <option value="1">1环</option>
+                            <option value="2">2环</option>
+                            <option value="3">3环</option>
+                            <option value="4">4环</option>
+                            <option value="5">5环</option>
+                            <option value="6">6环</option>
+                            <option value="7">7环</option>
+                            <option value="8">8环</option>
+                            <option value="9">9环</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label for="school-search">学派</label>
+                        <select id="school-search">
+                            <option value="">全部学派</option>
+                            <option value="咒法">咒法</option>
+                            <option value="防护">防护</option>
+                            <option value="幻术">幻术</option>
+                            <option value="预言">预言</option>
+                            <option value="死灵">死灵</option>
+                            <option value="塑能">塑能</option>
+                            <option value="变化">变化</option>
+                            <option value="仪式">仪式</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="results-container">
+            <div class="results-header">
+                <h2><i class="fas fa-scroll"></i> 法术结果</h2>
+                <div class="results-count">共 <span id="results-count">0</span> 个法术</div>
+            </div>
+            
+            <div class="spells-grid" id="spells-grid">
+                <!-- 法术卡片将通过JavaScript动态生成 -->
+            </div>
+            
+            <div class="no-results" id="no-results">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>未找到匹配的法术。请尝试不同的搜索条件。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 法术详情模态框 -->
+    <div class="modal" id="spell-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="modal-title"></div>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-meta">
+                    <div class="modal-meta-item">
+                        <i class="fas fa-book"></i> <span id="modal-school"></span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-fire"></i> <span id="modal-level"></span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-clock"></i> <span id="modal-casting-time"></span>
+                    </div>
+                    <div class="modal-meta-item">
+                        <i class="fas fa-ruler-combined"></i> <span id="modal-range"></span>
+                    </div>
+                </div>
+                
+                <div class="modal-description" id="modal-description"></div>
+                
+                <div class="modal-higher-level" id="modal-higher-level">
+                    <h3><i class="fas fa-level-up-alt"></i> 升环施法效应</h3>
+                    <p id="modal-higher-level-desc"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM元素
+        const spellsGrid = document.getElementById('spells-grid');
+        const noResults = document.getElementById('no-results');
+        const resultsCount = document.getElementById('results-count');
+        const modal = document.getElementById('spell-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalSchool = document.getElementById('modal-school');
+        const modalLevel = document.getElementById('modal-level');
+        const modalCastingTime = document.getElementById('modal-casting-time');
+        const modalRange = document.getElementById('modal-range');
+        const modalDescription = document.getElementById('modal-description');
+        const modalHigherLevel = document.getElementById('modal-higher-level');
+        const modalHigherLevelDesc = document.getElementById('modal-higher-level-desc');
+        const closeModal = document.getElementById('close-modal');
+
+        // 搜索元素
+        const nameSearch = document.getElementById('name-search');
+        const levelSearch = document.getElementById('level-search');
+        const schoolSearch = document.getElementById('school-search');
+
+        // 法术数据
+        let spells = [];
+
+        // 从JSON文件加载法术数据
+        async function loadSpells() {
+            try {
+                const response = await fetch('./spells.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                spells = await response.json();
+                console.log('法术数据加载成功', spells);
+                renderSpells(spells);
+                setupEventListeners();
+            } catch (error) {
+                console.error('加载法术数据失败:', error);
+                // 如果加载失败，使用内联示例数据
+                spells = [
+                    {
+                        "name_cn": "酸液飞溅",
+                        "name_en": "Acid Splash",
+                        "school": "咒法",
+                        "level": "cantrip",
+                        "casting_time": "1动作",
+                        "range": "60尺",
+                        "components": "V、S",
+                        "duration": "立即",
+                        "description": "你掷出一颗酸液球。在施法距离内指定一个你能看见的生物，或者在施法距离内指定你能看见的两个相距不超过5尺的生物。每个目标必须进行一次敏捷豁免，豁免失败则受到1d6点强酸伤害。你到达5级时，该法术的伤害增加1d6（变为2d6）。11级时再加1d6（变为3d6），17级时再加1d6（变为4d6）。",
+                        "higher_level": "使用3环或更高法术位施展该法术时，你使用的法术位每比2环高一环，每个目标的生命值上限和当前生命值就额外提高5点。"
+                    },
+                    {
+                        "name_cn": "援助术",
+                        "name_en": "Aid",
+                        "school": "防护",
+                        "level": 2,
+                        "casting_time": "1动作",
+                        "range": "30尺",
+                        "components": "V、S、M（一小片白布）",
+                        "duration": "8小时",
+                        "description": "你的法术增强了盟友的韧性和毅力。在施法距离内指定至多三个生物。每个目标的生命值上限和当前生命值在法术持续时间内提高5点。",
+                        "higher_level": "使用3环或更高法术位施展该法术时，你使用的法术位每比2环高一环，每个目标的生命值上限和当前生命值就额外提高5点。"
+                    },
+                    {
+                        "name_cn": "警报术",
+                        "name_en": "Alarm",
+                        "school": "防护",
+                        "level": 1,
+                        "casting_time": "1分钟",
+                        "range": "30尺",
+                        "components": "V、S、M（一小片铜片）",
+                        "duration": "8小时",
+                        "description": "你设置一个魔法警报。在施法距离内指定一个区域（最大10尺立方体）。当有生物进入该区域或触碰该区域时，警报会触发。警报会以响亮的声音和强光惊醒所有在该区域内的生物。",
+                        "higher_level": null
+                    },
+                    {
+                        "name_cn": "变身术",
+                        "name_en": "Blink",
+                        "school": "幻术",
+                        "level": 3,
+                        "casting_time": "1动作",
+                        "range": "自选",
+                        "components": "V、S",
+                        "duration": "1分钟",
+                        "description": "你获得了一次机会，可以在本回合的任何时刻，将自己传送到5尺外的任何未被占据的空间。该效果每回合可以使用一次。",
+                        "higher_level": "使用4环或更高法术位施展该法术时，该法术的持续时间延长至10分钟。"
+                    },
+                    {
+                        "name_cn": "魔法伎俩",
+                        "name_en": "Prestidigitation",
+                        "school": "咒法",
+                        "level": "cantrip",
+                        "casting_time": "1动作",
+                        "range": "30尺",
+                        "components": "V、S",
+                        "duration": "立即",
+                        "description": "你施展一个微小的魔法效果，如改变颜色、形状或气味。该法术可以用来制造小规模的干扰，但不会造成任何伤害。",
+                        "higher_level": null
+                    },
+                    {
+                        "name_cn": "治疗术",
+                        "name_en": "Healing Word",
+                        "school": "防护",
+                        "level": 1,
+                        "casting_time": "1动作",
+                        "range": "60尺",
+                        "components": "V",
+                        "duration": "立即",
+                        "description": "你呼唤一道神圣的光，为一个在施法距离内的生物治疗1d4+4点生命值。如果该生物的当前生命值低于5点，治疗量翻倍。",
+                        "higher_level": "使用2环或更高法术位施展该法术时，治疗量增加1d4。"
+                    },
+                    {
+                        "name_cn": "火焰箭",
+                        "name_en": "Fire Bolt",
+                        "school": "塑能",
+                        "level": 1,
+                        "casting_time": "1动作",
+                        "range": "120尺",
+                        "components": "V、S",
+                        "duration": "立即",
+                        "description": "你射出一道火焰箭，对一个在施法距离内的目标造成1d10点火焰伤害。",
+                        "higher_level": "使用2环或更高法术位施展该法术时，伤害增加1d10。"
+                    },
+                    {
+                        "name_cn": "幻影杀手",
+                        "name_en": "Phantasmal Killer",
+                        "school": "幻术",
+                        "level": 4,
+                        "casting_time": "1动作",
+                        "range": "60尺",
+                        "components": "V、S",
+                        "duration": "1分钟",
+                        "description": "你创造一个幻象，对一个在施法距离内的目标造成精神上的恐惧。目标必须进行一次感知豁免，豁免失败则受到1d10点精神伤害，并且在接下来的1分钟内处于恐惧状态。",
+                        "higher_level": null
+                    }
+                ];
+                renderSpells(spells);
+                setupEventListeners();
+            }
+        }
+
+        // 渲染法术卡片
+        function renderSpells(spellList) {
+            spellsGrid.innerHTML = '';
+            noResults.style.display = 'none';
+            
+            if (spellList.length === 0) {
+                noResults.style.display = 'block';
+                resultsCount.textContent = '0';
+                return;
+            }
+            
+            spellList.forEach(spell => {
+                const card = document.createElement('div');
+                card.className = 'spell-card';
+                card.dataset.id = spell.name_cn;
+                
+                // 确定环阶标签类名
+                let levelClass = '';
+                if (spell.level === 'cantrip') {
+                    levelClass = 'cantrip';
+                } else {
+                    levelClass = `level-${spell.level}`;
+                }
+                
+                card.innerHTML = `
+                    <div class="spell-header">
+                        <div class="spell-name">${spell.name_cn}</div>
+                        <div class="spell-level"><span class="level-tag ${levelClass}">${spell.level === 'cantrip' ? '戏法' : spell.level + '环'}</span></div>
+                    </div>
+                    <div class="spell-body">
+                        <div class="spell-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-book"></i> <span>${spell.school}</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-fire"></i> <span>${spell.level === 'cantrip' ? '戏法' : spell.level + '环'}</span>
+                            </div>
+                        </div>
+                        <div class="spell-desc">${spell.description.substring(0, 100)}${spell.description.length > 100 ? '...' : ''}</div>
+                        <div class="spell-footer">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i> <span>${spell.casting_time}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                spellsGrid.appendChild(card);
+            });
+            
+            resultsCount.textContent = spellList.length;
+        }
+
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 搜索功能
+            nameSearch.addEventListener('input', debounce(searchSpells, 300));
+            levelSearch.addEventListener('change', searchSpells);
+            schoolSearch.addEventListener('change', searchSpells);
+            
+            // 法术卡片点击
+            spellsGrid.addEventListener('click', (e) => {
+                if (e.target.closest('.spell-card')) {
+                    const card = e.target.closest('.spell-card');
+                    const spellName = card.dataset.id;
+                    showSpellDetails(spellName);
+                }
+            });
+            
+            // 关闭模态框
+            closeModal.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+            
+            // 点击模态框外部关闭
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // 搜索法术
+        function searchSpells() {
+            const nameQuery = nameSearch.value.toLowerCase();
+            const levelQuery = levelSearch.value;
+            const schoolQuery = schoolSearch.value;
+            
+            const filteredSpells = spells.filter(spell => {
+                // 名称搜索
+                const nameMatch = !nameQuery || spell.name_cn.toLowerCase().includes(nameQuery) || 
+                                 spell.name_en.toLowerCase().includes(nameQuery);
+                
+                // 环阶搜索
+                const levelMatch = !levelQuery || (spell.level === levelQuery);
+                
+                // 学派搜索
+                const schoolMatch = !schoolQuery || spell.school.toLowerCase() === schoolQuery.toLowerCase();
+                
+                return nameMatch && levelMatch && schoolMatch;
+            });
+            
+            renderSpells(filteredSpells);
+        }
+
+        // 显示法术详情
+        function showSpellDetails(spellName) {
+            const spell = spells.find(s => s.name_cn === spellName);
+            
+            if (!spell) return;
+            
+            modalTitle.textContent = spell.name_cn;
+            modalSchool.textContent = spell.school;
+            modalLevel.textContent = spell.level === 'cantrip' ? '戏法' : `${spell.level}环`;
+            modalCastingTime.textContent = spell.casting_time;
+            modalRange.textContent = spell.range;
+            modalDescription.textContent = spell.description;
+            
+            if (spell.higher_level) {
+                modalHigherLevelDesc.textContent = spell.higher_level;
+                modalHigherLevel.style.display = 'block';
+            } else {
+                modalHigherLevel.style.display = 'none';
+            }
+            
+            modal.style.display = 'flex';
+        }
+
+        // 防抖函数
+        function debounce(func, delay) {
+            let timeoutId;
+            return function() {
+                clearTimeout(timeoutId);
+                timeoutId = setTimeout(() => func.apply(this, arguments), delay);
+            };
+        }
+
+        // 初始化
+        document.addEventListener('DOMContentLoaded', loadSpells);
+    </script>
+</body>
+</html>
