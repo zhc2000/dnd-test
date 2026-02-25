@@ -460,15 +460,15 @@
                         <select id="level-search">
                             <option value="">全部环阶</option>
                             <option value="cantrip">戏法</option>
-                            <option value="1">1环</option>
-                            <option value="2">2环</option>
-                            <option value="3">3环</option>
-                            <option value="4">4环</option>
-                            <option value="5">5环</option>
-                            <option value="6">6环</option>
-                            <option value="7">7环</option>
-                            <option value="8">8环</option>
-                            <option value="9">9环</option>
+                            <option value="1环">1环</option>
+                            <option value="2环">2环</option>
+                            <option value="3环">3环</option>
+                            <option value="4环">4环</option>
+                            <option value="5环">5环</option>
+                            <option value="6环">6环</option>
+                            <option value="7环">7环</option>
+                            <option value="8环">8环</option>
+                            <option value="9环">9环</option>
                         </select>
                     </div>
                     <div class="search-group">
@@ -793,7 +793,7 @@
             
             modalTitle.textContent = spell.name_cn;
             modalSchool.textContent = spell.school;
-            modalLevel.textContent = spell.level === 'cantrip' ? '戏法' : `${spell.level}环`;
+            modalLevel.textContent = spell.level === 'cantrip' ? '戏法' : `${spell.level}`;
             modalCastingTime.textContent = spell.casting_time;
             modalRange.textContent = spell.range;
             modalDescription.textContent = spell.description;
