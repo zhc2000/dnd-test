@@ -1,0 +1,2408 @@
+[
+  {
+    "occName": {
+      "occ_cn": "吟游诗人",
+      "occ_en": "Bard"
+    },
+    "spell_levels": [
+      {
+        "level": "戏法",
+        "spells": [
+          {
+            "name_cn": "舞光术",
+            "name_en": "Blade Ward"
+          },
+          {
+            "name_cn": "交友术",
+            "name_en": "Dancing Lights"
+          },
+          {
+            "name_cn": "光亮术",
+            "name_en": "Friends"
+          },
+          {
+            "name_cn": "修复术",
+            "name_en": "Light"
+          },
+          {
+            "name_cn": "传讯术",
+            "name_en": "Mage Hand"
+          },
+          {
+            "name_cn": "魔法",
+            "name_en": "Mending"
+          },
+          {
+            "name_cn": "恶言",
+            "name_en": "Message"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "灾祸术",
+            "name_en": "Animal Friendship"
+          },
+          {
+            "name_cn": "通晓语言",
+            "name_en": "Bane"
+          },
+          {
+            "name_cn": "疗伤术",
+            "name_en": "Charm Person"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Comprehend Languages"
+          },
+          {
+            "name_cn": "易容术",
+            "name_en": "Cure Wounds"
+          },
+          {
+            "name_cn": "不谐低语",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "羽落术",
+            "name_en": "Disguise Self"
+          },
+          {
+            "name_cn": "治愈真言",
+            "name_en": "Dissonant Whispers"
+          },
+          {
+            "name_cn": "鉴定术",
+            "name_en": "Faerie Fire"
+          },
+          {
+            "name_cn": "睡眠术",
+            "name_en": "Feather Fall"
+          },
+          {
+            "name_cn": "动物交谈术",
+            "name_en": "Healing Word"
+          },
+          {
+            "name_cn": "塔莎狂笑术",
+            "name_en": "Heroism"
+          },
+          {
+            "name_cn": "雷鸣波",
+            "name_en": "Identify"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "/耳聋术",
+            "name_en": "Animal Messenger"
+          },
+          {
+            "name_cn": "注目术",
+            "name_en": "Blindness"
+          },
+          {
+            "name_cn": "人类定身术",
+            "name_en": "Deafness"
+          },
+          {
+            "name_cn": "隐形术",
+            "name_en": "Calm Emotions"
+          },
+          {
+            "name_cn": "敲击术",
+            "name_en": "Cloud"
+          },
+          {
+            "name_cn": "次级复原术",
+            "name_en": "Daggers"
+          },
+          {
+            "name_cn": "动植物定位术",
+            "name_en": "Crown"
+          },
+          {
+            "name_cn": "物件定位术",
+            "name_en": "Madness"
+          },
+          {
+            "name_cn": "魔嘴术",
+            "name_en": "Detect Thoughts"
+          },
+          {
+            "name_cn": "粉碎音波",
+            "name_en": "Enhance Ability"
+          },
+          {
+            "name_cn": "沉默术",
+            "name_en": "Enthrall"
+          },
+          {
+            "name_cn": "暗示术",
+            "name_en": "Heat Metal"
+          },
+          {
+            "name_cn": "诚实之域",
+            "name_en": "Hold Person"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "降咒",
+            "name_en": "Bestow Curse"
+          },
+          {
+            "name_cn": "鹰眼术",
+            "name_en": "Clairvoyance"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Dispel Magic"
+          },
+          {
+            "name_cn": "恐惧术",
+            "name_en": "Fear"
+          },
+          {
+            "name_cn": "假死术",
+            "name_en": "Feign Death"
+          },
+          {
+            "name_cn": "短讯术",
+            "name_en": "Glyph"
+          },
+          {
+            "name_cn": "臭云术",
+            "name_en": "Warding"
+          },
+          {
+            "name_cn": "巧言术",
+            "name_en": "Hypnotic Pattern"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "强迫术",
+            "name_en": "Compulsion"
+          },
+          {
+            "name_cn": "困惑术",
+            "name_en": "Confusion"
+          },
+          {
+            "name_cn": "任意门",
+            "name_en": "Dimension Door"
+          },
+          {
+            "name_cn": "高等隐形术",
+            "name_en": "Freedom"
+          },
+          {
+            "name_cn": "生物定位术",
+            "name_en": "Movement"
+          },
+          {
+            "name_cn": "变形术",
+            "name_en": "Greater Invisibility"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "启蒙术",
+            "name_en": "Animate Objects"
+          },
+          {
+            "name_cn": "托梦术",
+            "name_en": "Awaken"
+          },
+          {
+            "name_cn": "指使术",
+            "name_en": "Dominate Person"
+          },
+          {
+            "name_cn": "高等复原术",
+            "name_en": "Dream"
+          },
+          {
+            "name_cn": "怪物定身术",
+            "name_en": "Geas"
+          },
+          {
+            "name_cn": "群体疗伤术",
+            "name_en": "Greater Restoration"
+          },
+          {
+            "name_cn": "假象术",
+            "name_en": "Hold Monster"
+          },
+          {
+            "name_cn": "篡改记",
+            "name_en": "Legend Lore"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Mass Cure Wounds"
+          },
+          {
+            "name_cn": "伪装术",
+            "name_en": "Mislead"
+          },
+          {
+            "name_cn": "传送法阵",
+            "name_en": "Modify Memory"
+          }
+        ]
+      },
+      {
+        "level": "6环",
+        "spells": [
+          {
+            "name_cn": "摄心目光",
+            "name_en": "Eyebite"
+          },
+          {
+            "name_cn": "寻路术",
+            "name_en": "Find"
+          },
+          {
+            "name_cn": "铜墙",
+            "name_en": "Path"
+          },
+          {
+            "name_cn": "群体暗示术",
+            "name_en": "Guards"
+          },
+          {
+            "name_cn": "真知术",
+            "name_en": "Wards"
+          }
+        ]
+      },
+      {
+        "level": "7环",
+        "spells": [
+          {
+            "name_cn": "摩登肯豪宅术",
+            "name_en": "Etherealness"
+          },
+          {
+            "name_cn": "投影术",
+            "name_en": "Forcecage"
+          },
+          {
+            "name_cn": "再生术",
+            "name_en": "Mirage Arcan"
+          },
+          {
+            "name_cn": "复生术",
+            "name_en": "Mordenkainen"
+          },
+          {
+            "name_cn": "魔法徽记",
+            "name_en": "Magnificent Mansion"
+          },
+          {
+            "name_cn": "传送术",
+            "name_en": "Mordenkainen ’s"
+          }
+        ]
+      },
+      {
+        "level": "8环",
+        "spells": [
+          {
+            "name_cn": "弱智术",
+            "name_en": "Dominate Monster"
+          },
+          {
+            "name_cn": "花言巧语",
+            "name_en": "Feeblemind"
+          }
+        ]
+      },
+      {
+        "level": "9环",
+        "spells": [
+          {
+            "name_cn": "预警术",
+            "name_en": "Foresight"
+          },
+          {
+            "name_cn": "完全变形术",
+            "name_en": "Power Word Heal"
+          },
+          {
+            "name_cn": "牧师法术",
+            "name_en": "Power Word Kill"
+          }
+        ]
+      },
+      {
+        "level": "戏法",
+        "spells": [
+          {
+            "name_cn": "神导术",
+            "name_en": "Guidance"
+          },
+          {
+            "name_cn": "光亮术",
+            "name_en": "Light"
+          },
+          {
+            "name_cn": "修复术",
+            "name_en": "Mending"
+          },
+          {
+            "name_cn": "圣火术",
+            "name_en": "Resistance"
+          },
+          {
+            "name_cn": "维生术",
+            "name_en": "Sacred Flame"
+          },
+          {
+            "name_cn": "奇术",
+            "name_en": "Spare"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "灾祸术",
+            "name_en": "Bane"
+          },
+          {
+            "name_cn": "祝福术",
+            "name_en": "Bless"
+          },
+          {
+            "name_cn": "命令术",
+            "name_en": "Command"
+          },
+          {
+            "name_cn": "/枯水术",
+            "name_en": "Create"
+          },
+          {
+            "name_cn": "疗伤术",
+            "name_en": "Destroy"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Water"
+          },
+          {
+            "name_cn": "曳光",
+            "name_en": "Cure Wounds"
+          },
+          {
+            "name_cn": "治愈真言",
+            "name_en": "Detect Evil"
+          },
+          {
+            "name_cn": "致伤术",
+            "name_en": "Good"
+          },
+          {
+            "name_cn": "庇护术",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "虔诚护盾",
+            "name_en": "Detect Poison"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "援助术",
+            "name_en": "Aid"
+          },
+          {
+            "name_cn": "卜筮术",
+            "name_en": "Augury"
+          },
+          {
+            "name_cn": "/耳聋术",
+            "name_en": "Blindness"
+          },
+          {
+            "name_cn": "人类定身术",
+            "name_en": "Deafness"
+          },
+          {
+            "name_cn": "次级复原术",
+            "name_en": "Calm Emotions"
+          },
+          {
+            "name_cn": "物件定位术",
+            "name_en": "Continual Flame"
+          },
+          {
+            "name_cn": "治疗祷言",
+            "name_en": "Enhance Ability"
+          },
+          {
+            "name_cn": "沉默术",
+            "name_en": "Find Traps"
+          },
+          {
+            "name_cn": "诚实之域",
+            "name_en": "Gentle Repose"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "降咒",
+            "name_en": "Animate Dead"
+          },
+          {
+            "name_cn": "鹰眼术",
+            "name_en": "Beacon"
+          },
+          {
+            "name_cn": "造粮术",
+            "name_en": "Hope"
+          },
+          {
+            "name_cn": "昼明术",
+            "name_en": "Bestow Curse"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Clairvoyance"
+          },
+          {
+            "name_cn": "假死术",
+            "name_en": "Create Food"
+          },
+          {
+            "name_cn": "防护法阵",
+            "name_en": "Water"
+          },
+          {
+            "name_cn": "群体治愈真言",
+            "name_en": "Daylight"
+          },
+          {
+            "name_cn": "防护能",
+            "name_en": "Dispel Magic"
+          },
+          {
+            "name_cn": "移除诅咒",
+            "name_en": "Feign Death"
+          },
+          {
+            "name_cn": "回生术",
+            "name_en": "Glyph"
+          },
+          {
+            "name_cn": "短讯术",
+            "name_en": "Warding"
+          },
+          {
+            "name_cn": "巧言术",
+            "name_en": "Magic Circle"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "放逐术",
+            "name_en": "Banishment"
+          },
+          {
+            "name_cn": "防死结界",
+            "name_en": "Control Water"
+          },
+          {
+            "name_cn": "预言术",
+            "name_en": "Death Ward"
+          },
+          {
+            "name_cn": "生物定位术",
+            "name_en": "Divination"
+          },
+          {
+            "name_cn": "塑石术",
+            "name_en": "Freedom"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "通神术",
+            "name_en": "Commune"
+          },
+          {
+            "name_cn": "疫病术",
+            "name_en": "Contagion"
+          },
+          {
+            "name_cn": "焰击术",
+            "name_en": "Dispel Evil"
+          },
+          {
+            "name_cn": "指使术",
+            "name_en": "Good"
+          },
+          {
+            "name_cn": "高等复原术",
+            "name_en": "Flame Strike"
+          },
+          {
+            "name_cn": "群体疗伤术",
+            "name_en": "Geas"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Greater Restoration"
+          }
+        ]
+      },
+      {
+        "level": "6环",
+        "spells": [
+          {
+            "name_cn": "寻路术",
+            "name_en": "Blade Barrier"
+          },
+          {
+            "name_cn": "禁制术",
+            "name_en": "Create Undead"
+          },
+          {
+            "name_cn": "重伤术",
+            "name_en": "Find"
+          },
+          {
+            "name_cn": "医疗术",
+            "name_en": "Path"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Forbiddance"
+          },
+          {
+            "name_cn": "真知术",
+            "name_en": "Harm"
+          },
+          {
+            "name_cn": "回返真言",
+            "name_en": "Heal"
+          }
+        ]
+      },
+      {
+        "level": "7环",
+        "spells": [
+          {
+            "name_cn": "召唤天界",
+            "name_en": "Conjure Celestial"
+          },
+          {
+            "name_cn": "圣言术",
+            "name_en": "Divine Word"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Etherealness"
+          },
+          {
+            "name_cn": "再生术",
+            "name_en": "Fire Storm"
+          },
+          {
+            "name_cn": "复生术",
+            "name_en": "Plane Shift"
+          },
+          {
+            "name_cn": "魔法徽记",
+            "name_en": "Regenerate"
+          }
+        ]
+      },
+      {
+        "level": "8环",
+        "spells": [
+          {
+            "name_cn": "反魔法",
+            "name_en": "Antimagic Field"
+          },
+          {
+            "name_cn": "地震术",
+            "name_en": "Control Weather"
+          },
+          {
+            "name_cn": "圣洁灵光",
+            "name_en": "Earthquake"
+          }
+        ]
+      },
+      {
+        "level": "9环",
+        "spells": [
+          {
+            "name_cn": "星界",
+            "name_en": "Astral Projection"
+          },
+          {
+            "name_cn": "异界之门",
+            "name_en": "Gate"
+          },
+          {
+            "name_cn": "群体医疗术",
+            "name_en": "Mass Heal"
+          },
+          {
+            "name_cn": "完全复生术",
+            "name_en": "True Resurrection"
+          },
+          {
+            "name_cn": "德鲁伊法术",
+            "name_en": "Druid Spells"
+          }
+        ]
+      },
+      {
+        "level": "戏法",
+        "spells": [
+          {
+            "name_cn": "神导术",
+            "name_en": "Druidcraft"
+          },
+          {
+            "name_cn": "修复术",
+            "name_en": "Guidance"
+          },
+          {
+            "name_cn": "燃火术",
+            "name_en": "Mending"
+          },
+          {
+            "name_cn": "橡棍术",
+            "name_en": "Poison Spray"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "/枯水术",
+            "name_en": "Animal Friendship"
+          },
+          {
+            "name_cn": "疗伤术",
+            "name_en": "Charm Person"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Create"
+          },
+          {
+            "name_cn": "纠缠术",
+            "name_en": "Destroy"
+          },
+          {
+            "name_cn": "云雾术",
+            "name_en": "Water"
+          },
+          {
+            "name_cn": "神莓术",
+            "name_en": "Cure Wounds"
+          },
+          {
+            "name_cn": "治愈真言",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "跳跃术",
+            "name_en": "Detect Poison"
+          },
+          {
+            "name_cn": "动物交谈术",
+            "name_en": "Disease"
+          },
+          {
+            "name_cn": "雷鸣波",
+            "name_en": "Entangle"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "树肤术",
+            "name_en": "Animal Messenger"
+          },
+          {
+            "name_cn": "炽焰法",
+            "name_en": "Barkskin"
+          },
+          {
+            "name_cn": "造风术",
+            "name_en": "Beast Sense"
+          },
+          {
+            "name_cn": "人类定身术",
+            "name_en": "Darkvision"
+          },
+          {
+            "name_cn": "次级复原术",
+            "name_en": "Enhance Ability"
+          },
+          {
+            "name_cn": "动植物定位术",
+            "name_en": "Find Traps"
+          },
+          {
+            "name_cn": "物件定位术",
+            "name_en": "Flame Blade"
+          },
+          {
+            "name_cn": "月华之光",
+            "name_en": "Flaming Sphere"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "召雷术",
+            "name_en": "Call Lightning"
+          },
+          {
+            "name_cn": "昼明术",
+            "name_en": "Conjure Animals"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Daylight"
+          },
+          {
+            "name_cn": "假死术",
+            "name_en": "Dispel Magic"
+          },
+          {
+            "name_cn": "防护能",
+            "name_en": "Feign Death"
+          },
+          {
+            "name_cn": "植物交谈术",
+            "name_en": "Meld"
+          },
+          {
+            "name_cn": "风墙术",
+            "name_en": "Stone"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "枯萎术",
+            "name_en": "Blight"
+          },
+          {
+            "name_cn": "困惑术",
+            "name_en": "Confusion"
+          },
+          {
+            "name_cn": "巨虫术",
+            "name_en": "Conjure Minor"
+          },
+          {
+            "name_cn": "生物定位术",
+            "name_en": "Elementals"
+          },
+          {
+            "name_cn": "变形术",
+            "name_en": "Conjure Woodland"
+          },
+          {
+            "name_cn": "塑石术",
+            "name_en": "Beings"
+          },
+          {
+            "name_cn": "石肤术",
+            "name_en": "Control Water"
+          },
+          {
+            "name_cn": "火墙术",
+            "name_en": "Dominate Beast"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "启蒙术",
+            "name_en": "Antilife Shell"
+          },
+          {
+            "name_cn": "疫病术",
+            "name_en": "Awaken"
+          },
+          {
+            "name_cn": "指使术",
+            "name_en": "Commune"
+          },
+          {
+            "name_cn": "高等复原术",
+            "name_en": "Nature"
+          },
+          {
+            "name_cn": "群体疗伤术",
+            "name_en": "Conjure Elemental"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Contagion"
+          },
+          {
+            "name_cn": "转生术",
+            "name_en": "Geas"
+          },
+          {
+            "name_cn": "树跃术",
+            "name_en": "Greater Restoration"
+          },
+          {
+            "name_cn": "石墙术",
+            "name_en": "Insect Plague"
+          }
+        ]
+      },
+      {
+        "level": "6环",
+        "spells": [
+          {
+            "name_cn": "寻路术",
+            "name_en": "Conjure Fey"
+          },
+          {
+            "name_cn": "医疗术",
+            "name_en": "Find"
+          },
+          {
+            "name_cn": "地动术",
+            "name_en": "Path"
+          },
+          {
+            "name_cn": "木遁术",
+            "name_en": "Heal"
+          },
+          {
+            "name_cn": "棘墙术",
+            "name_en": "Heroes"
+          }
+        ]
+      },
+      {
+        "level": "7环",
+        "spells": [
+          {
+            "name_cn": "异界",
+            "name_en": "Fire Storm"
+          },
+          {
+            "name_cn": "再生术",
+            "name_en": "Mirage Arcan"
+          }
+        ]
+      },
+      {
+        "level": "8环",
+        "spells": [
+          {
+            "name_cn": "/关怀术",
+            "name_en": "Animal Shapes"
+          },
+          {
+            "name_cn": "地震术",
+            "name_en": "Antipathy"
+          },
+          {
+            "name_cn": "弱智术",
+            "name_en": "Sympathy"
+          },
+          {
+            "name_cn": "海啸术",
+            "name_en": "Control Weather"
+          }
+        ]
+      },
+      {
+        "level": "9环",
+        "spells": [
+          {
+            "name_cn": "预警术",
+            "name_en": "Foresight"
+          },
+          {
+            "name_cn": "完全复生术",
+            "name_en": "Shapechange"
+          },
+          {
+            "name_cn": "圣武士法术",
+            "name_en": "Storm"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "祝福术",
+            "name_en": "Bless"
+          },
+          {
+            "name_cn": "命令术",
+            "name_en": "Command"
+          },
+          {
+            "name_cn": "疗伤术",
+            "name_en": "Compelled Duel"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Cure Wounds"
+          },
+          {
+            "name_cn": "炽焰斩",
+            "name_en": "Detect Evil"
+          },
+          {
+            "name_cn": "虔诚护盾",
+            "name_en": "Good"
+          },
+          {
+            "name_cn": "雷鸣斩",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "激愤斩",
+            "name_en": "Detect Poison"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "援助术",
+            "name_en": "Aid"
+          },
+          {
+            "name_cn": "印记斩",
+            "name_en": "Branding Smite"
+          },
+          {
+            "name_cn": "次级复原术",
+            "name_en": "Find Steed"
+          },
+          {
+            "name_cn": "物件定位术",
+            "name_en": "Lesser Restoration"
+          },
+          {
+            "name_cn": "诚实之域",
+            "name_en": "Locate Object"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "活力灵光",
+            "name_en": "Aura"
+          },
+          {
+            "name_cn": "致盲斩",
+            "name_en": "Vitality"
+          },
+          {
+            "name_cn": "造粮术",
+            "name_en": "Blinding Smite"
+          },
+          {
+            "name_cn": "昼明术",
+            "name_en": "Create Food"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Water"
+          },
+          {
+            "name_cn": "防护法阵",
+            "name_en": "Crusader ’s"
+          },
+          {
+            "name_cn": "移除诅咒",
+            "name_en": "Mantle"
+          },
+          {
+            "name_cn": "回生术",
+            "name_en": "Daylight"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "生命灵光",
+            "name_en": "Aura"
+          },
+          {
+            "name_cn": "净化灵光",
+            "name_en": "Life"
+          },
+          {
+            "name_cn": "放逐术",
+            "name_en": "Aura"
+          },
+          {
+            "name_cn": "防死结界",
+            "name_en": "Purity"
+          },
+          {
+            "name_cn": "生物定位术",
+            "name_en": "Banishment"
+          },
+          {
+            "name_cn": "惊惧斩",
+            "name_en": "Death Ward"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "放逐斩",
+            "name_en": "Banishing Smite"
+          },
+          {
+            "name_cn": "原力法阵",
+            "name_en": "Circle"
+          },
+          {
+            "name_cn": "湮灭波",
+            "name_en": "Power"
+          },
+          {
+            "name_cn": "指使术",
+            "name_en": "Destructive Wave"
+          },
+          {
+            "name_cn": "游侠法术",
+            "name_en": "Dispel Evil"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "警报术",
+            "name_en": "Alarm"
+          },
+          {
+            "name_cn": "疗伤术",
+            "name_en": "Animal Friendship"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Cure Wounds"
+          },
+          {
+            "name_cn": "诱捕打击",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "云雾术",
+            "name_en": "Detect Poison"
+          },
+          {
+            "name_cn": "神莓术",
+            "name_en": "Disease"
+          },
+          {
+            "name_cn": "棘雹术",
+            "name_en": "Ensnaring Strike"
+          },
+          {
+            "name_cn": "猎人印记",
+            "name_en": "Fog Cloud"
+          },
+          {
+            "name_cn": "跳跃术",
+            "name_en": "Goodberry"
+          },
+          {
+            "name_cn": "动物交谈术",
+            "name_en": "Hail"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "树肤术",
+            "name_en": "Animal Messenger"
+          },
+          {
+            "name_cn": "警戒之箭",
+            "name_en": "Barkskin"
+          },
+          {
+            "name_cn": "次级复原术",
+            "name_en": "Beast Sense"
+          },
+          {
+            "name_cn": "动植物定位术",
+            "name_en": "Cordon"
+          },
+          {
+            "name_cn": "物件定位术",
+            "name_en": "Arrows"
+          },
+          {
+            "name_cn": "沉默术",
+            "name_en": "Darkvision"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "召唤箭",
+            "name_en": "Conjure Animals"
+          },
+          {
+            "name_cn": "昼明术",
+            "name_en": "Conjure Barrage"
+          },
+          {
+            "name_cn": "闪电箭",
+            "name_en": "Daylight"
+          },
+          {
+            "name_cn": "防护能",
+            "name_en": "Lightning Arrow"
+          },
+          {
+            "name_cn": "植物交谈术",
+            "name_en": "Nondetection"
+          },
+          {
+            "name_cn": "风墙术",
+            "name_en": "Plant Growth"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "生物定位术",
+            "name_en": "Conjure Woodland"
+          },
+          {
+            "name_cn": "石肤术",
+            "name_en": "Beings"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "万箭",
+            "name_en": "Commune"
+          },
+          {
+            "name_cn": "迅捷箭",
+            "name_en": "Nature"
+          },
+          {
+            "name_cn": "树跃术",
+            "name_en": "Conjure Volley"
+          },
+          {
+            "name_cn": "术士法术",
+            "name_en": "Swift Quiver"
+          }
+        ]
+      },
+      {
+        "level": "戏法",
+        "spells": [
+          {
+            "name_cn": "冻寒之触",
+            "name_en": "Acid Splash"
+          },
+          {
+            "name_cn": "舞光术",
+            "name_en": "Blade Ward"
+          },
+          {
+            "name_cn": "火焰箭",
+            "name_en": "Chill Touch"
+          },
+          {
+            "name_cn": "交友术",
+            "name_en": "Dancing Lights"
+          },
+          {
+            "name_cn": "光亮术",
+            "name_en": "Fire Bolt"
+          },
+          {
+            "name_cn": "修复术",
+            "name_en": "Friends"
+          },
+          {
+            "name_cn": "传讯术",
+            "name_en": "Light"
+          },
+          {
+            "name_cn": "魔法",
+            "name_en": "Mage Hand"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "通晓语言",
+            "name_en": "Burning Hands"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Charm Person"
+          },
+          {
+            "name_cn": "易容术",
+            "name_en": "Chromatic Orb"
+          },
+          {
+            "name_cn": "羽落术",
+            "name_en": "Color Spray"
+          },
+          {
+            "name_cn": "云雾术",
+            "name_en": "Comprehend Languages"
+          },
+          {
+            "name_cn": "跳跃术",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "魔法",
+            "name_en": "Disguise Self"
+          },
+          {
+            "name_cn": "护盾术",
+            "name_en": "Expeditious Retreat"
+          },
+          {
+            "name_cn": "睡眠术",
+            "name_en": "False Life"
+          },
+          {
+            "name_cn": "雷鸣波",
+            "name_en": "Feather Fall"
+          },
+          {
+            "name_cn": "巫术箭",
+            "name_en": "Fog Cloud"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "变身术",
+            "name_en": "Alter Self"
+          },
+          {
+            "name_cn": "/耳聋术",
+            "name_en": "Blindness"
+          },
+          {
+            "name_cn": "朦胧术",
+            "name_en": "Deafness"
+          },
+          {
+            "name_cn": "黑暗术",
+            "name_en": "Blur"
+          },
+          {
+            "name_cn": "/缩小术",
+            "name_en": "Cloud"
+          },
+          {
+            "name_cn": "造风术",
+            "name_en": "Daggers"
+          },
+          {
+            "name_cn": "人类定身术",
+            "name_en": "Crown"
+          },
+          {
+            "name_cn": "隐形术",
+            "name_en": "Madness"
+          },
+          {
+            "name_cn": "敲击术",
+            "name_en": "Darkness"
+          },
+          {
+            "name_cn": "浮空术",
+            "name_en": "Darkvision"
+          },
+          {
+            "name_cn": "镜影术",
+            "name_en": "Detect Thoughts"
+          },
+          {
+            "name_cn": "粉碎音波",
+            "name_en": "Enhance Ability"
+          },
+          {
+            "name_cn": "蛛行术",
+            "name_en": "Enlarge"
+          },
+          {
+            "name_cn": "暗示术",
+            "name_en": "Reduce"
+          },
+          {
+            "name_cn": "蛛网术",
+            "name_en": "Gust"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "闪现术",
+            "name_en": "Blink"
+          },
+          {
+            "name_cn": "鹰眼术",
+            "name_en": "Clairvoyance"
+          },
+          {
+            "name_cn": "法术",
+            "name_en": "Counterspell"
+          },
+          {
+            "name_cn": "昼明术",
+            "name_en": "Daylight"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Dispel Magic"
+          },
+          {
+            "name_cn": "恐惧术",
+            "name_en": "Fear"
+          },
+          {
+            "name_cn": "火球术",
+            "name_en": "Fireball"
+          },
+          {
+            "name_cn": "飞行术",
+            "name_en": "Fly"
+          },
+          {
+            "name_cn": "加速术",
+            "name_en": "Gaseous Form"
+          },
+          {
+            "name_cn": "防护能",
+            "name_en": "Haste"
+          },
+          {
+            "name_cn": "缓慢术",
+            "name_en": "Hypnotic Pattern"
+          },
+          {
+            "name_cn": "臭云术",
+            "name_en": "Lightning Bolt"
+          },
+          {
+            "name_cn": "巧言术",
+            "name_en": "Major Image"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "放逐术",
+            "name_en": "Banishment"
+          },
+          {
+            "name_cn": "枯萎术",
+            "name_en": "Blight"
+          },
+          {
+            "name_cn": "困惑术",
+            "name_en": "Confusion"
+          },
+          {
+            "name_cn": "任意门",
+            "name_en": "Dimension Door"
+          },
+          {
+            "name_cn": "高等隐形术",
+            "name_en": "Dominate Beast"
+          },
+          {
+            "name_cn": "变形术",
+            "name_en": "Greater Invisibility"
+          },
+          {
+            "name_cn": "石肤术",
+            "name_en": "Ice Storm"
+          },
+          {
+            "name_cn": "火墙术",
+            "name_en": "Polymorph"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "死云术",
+            "name_en": "Animate Objects"
+          },
+          {
+            "name_cn": "造物术",
+            "name_en": "Cloudkill"
+          },
+          {
+            "name_cn": "怪物定身术",
+            "name_en": "Cone"
+          },
+          {
+            "name_cn": "伪装术",
+            "name_en": "Cold"
+          },
+          {
+            "name_cn": "传送法阵",
+            "name_en": "Creation"
+          },
+          {
+            "name_cn": "石墙术",
+            "name_en": "Dominate Person"
+          }
+        ]
+      },
+      {
+        "level": "6环",
+        "spells": [
+          {
+            "name_cn": "秘法门",
+            "name_en": "Arcane Gate"
+          },
+          {
+            "name_cn": "死亡法阵",
+            "name_en": "Chain Lightning"
+          },
+          {
+            "name_cn": "解离术",
+            "name_en": "Circle"
+          },
+          {
+            "name_cn": "摄心目光",
+            "name_en": "Death"
+          },
+          {
+            "name_cn": "法术无效结界",
+            "name_en": "Disintegrate"
+          },
+          {
+            "name_cn": "群体暗示术",
+            "name_en": "Eyebite"
+          },
+          {
+            "name_cn": "地动术",
+            "name_en": "Globe"
+          },
+          {
+            "name_cn": "真知术",
+            "name_en": "Invulnerability"
+          }
+        ]
+      },
+      {
+        "level": "7环",
+        "spells": [
+          {
+            "name_cn": "异界",
+            "name_en": "Delayed Blast"
+          },
+          {
+            "name_cn": "虹光",
+            "name_en": "Fireball"
+          },
+          {
+            "name_cn": "传送术",
+            "name_en": "Etherealness"
+          }
+        ]
+      },
+      {
+        "level": "8环",
+        "spells": [
+          {
+            "name_cn": "地震术",
+            "name_en": "Dominate Monster"
+          },
+          {
+            "name_cn": "焚云术",
+            "name_en": "Earthquake"
+          }
+        ]
+      },
+      {
+        "level": "9环",
+        "spells": [
+          {
+            "name_cn": "异界之门",
+            "name_en": "Gate"
+          },
+          {
+            "name_cn": "祈愿术",
+            "name_en": "Meteor Swarm"
+          },
+          {
+            "name_cn": "邪术师法术",
+            "name_en": "Power Word Kill"
+          }
+        ]
+      },
+      {
+        "level": "戏法",
+        "spells": [
+          {
+            "name_cn": "冻寒之触",
+            "name_en": "Blade Ward"
+          },
+          {
+            "name_cn": "魔能",
+            "name_en": "Chill Touch"
+          },
+          {
+            "name_cn": "交友术",
+            "name_en": "Eldritch Blast"
+          },
+          {
+            "name_cn": "魔法",
+            "name_en": "Friends"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "通晓语言",
+            "name_en": "Armor"
+          },
+          {
+            "name_cn": "脆弱诅咒",
+            "name_en": "Agathys"
+          },
+          {
+            "name_cn": "巫术箭",
+            "name_en": "Arms"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "黑暗术",
+            "name_en": "Cloud"
+          },
+          {
+            "name_cn": "注目术",
+            "name_en": "Daggers"
+          },
+          {
+            "name_cn": "人类定身术",
+            "name_en": "Crown"
+          },
+          {
+            "name_cn": "隐形术",
+            "name_en": "Madn"
+          },
+          {
+            "name_cn": "镜影术",
+            "name_en": "Darkness"
+          },
+          {
+            "name_cn": "粉碎音波",
+            "name_en": "Enthrall"
+          },
+          {
+            "name_cn": "蛛行术",
+            "name_en": "Hold Person"
+          },
+          {
+            "name_cn": "暗示术",
+            "name_en": "Invisibility"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "法术",
+            "name_en": "Counterspell"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Dispel Magic"
+          },
+          {
+            "name_cn": "恐惧术",
+            "name_en": "Fear"
+          },
+          {
+            "name_cn": "飞行术",
+            "name_en": "Fly"
+          },
+          {
+            "name_cn": "防护法阵",
+            "name_en": "Gaseous Form"
+          },
+          {
+            "name_cn": "移除诅咒",
+            "name_en": "Hunger"
+          },
+          {
+            "name_cn": "巧言术",
+            "name_en": "Hadar"
+          },
+          {
+            "name_cn": "吸血鬼之触",
+            "name_en": "Hypnotic Pattern"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "放逐术",
+            "name_en": "Banishment"
+          },
+          {
+            "name_cn": "枯萎术",
+            "name_en": "Blight"
+          },
+          {
+            "name_cn": "任意门",
+            "name_en": "Dimension Door"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "异界",
+            "name_en": "Contact Other Plane"
+          },
+          {
+            "name_cn": "托梦术",
+            "name_en": "Dream"
+          },
+          {
+            "name_cn": "怪物定身术",
+            "name_en": "Hold Monster"
+          }
+        ]
+      },
+      {
+        "level": "6环",
+        "spells": [
+          {
+            "name_cn": "秘法门",
+            "name_en": "Arcane Gate"
+          },
+          {
+            "name_cn": "死亡法阵",
+            "name_en": "Circle"
+          },
+          {
+            "name_cn": "摄心目光",
+            "name_en": "Death"
+          },
+          {
+            "name_cn": "石化术",
+            "name_en": "Conjure Fey"
+          },
+          {
+            "name_cn": "群体暗示术",
+            "name_en": "Create Undead"
+          },
+          {
+            "name_cn": "真知术",
+            "name_en": "Eyebite"
+          }
+        ]
+      },
+      {
+        "level": "7环",
+        "spells": [
+          {
+            "name_cn": "异界",
+            "name_en": "Etherealness"
+          }
+        ]
+      },
+      {
+        "level": "8环",
+        "spells": [
+          {
+            "name_cn": "弱智术",
+            "name_en": "Demiplane"
+          },
+          {
+            "name_cn": "花言巧语",
+            "name_en": "Dominate Monster"
+          }
+        ]
+      },
+      {
+        "level": "9环",
+        "spells": [
+          {
+            "name_cn": "星界",
+            "name_en": "Astral Projection"
+          },
+          {
+            "name_cn": "预警术",
+            "name_en": "Foresight"
+          },
+          {
+            "name_cn": "禁锢术",
+            "name_en": "Imprisonment"
+          },
+          {
+            "name_cn": "完全变形术",
+            "name_en": "Power Word Kill"
+          },
+          {
+            "name_cn": "法师法术",
+            "name_en": "True Polymorph"
+          }
+        ]
+      },
+      {
+        "level": "戏法",
+        "spells": [
+          {
+            "name_cn": "冻寒之触",
+            "name_en": "Acid Splash"
+          },
+          {
+            "name_cn": "舞光术",
+            "name_en": "Blade Ward"
+          },
+          {
+            "name_cn": "火焰箭",
+            "name_en": "Chill Touch"
+          },
+          {
+            "name_cn": "交友术",
+            "name_en": "Dancing Lights"
+          },
+          {
+            "name_cn": "光亮术",
+            "name_en": "Fire Bolt"
+          },
+          {
+            "name_cn": "修复术",
+            "name_en": "Friends"
+          },
+          {
+            "name_cn": "传讯术",
+            "name_en": "Light"
+          },
+          {
+            "name_cn": "魔法",
+            "name_en": "Mage Hand"
+          }
+        ]
+      },
+      {
+        "level": "1环",
+        "spells": [
+          {
+            "name_cn": "警报术",
+            "name_en": "Alarm"
+          },
+          {
+            "name_cn": "通晓语言",
+            "name_en": "Burning Hands"
+          },
+          {
+            "name_cn": "侦测魔法",
+            "name_en": "Charm Person"
+          },
+          {
+            "name_cn": "易容术",
+            "name_en": "Chromatic Orb"
+          },
+          {
+            "name_cn": "羽落术",
+            "name_en": "Color Spray"
+          },
+          {
+            "name_cn": "云雾术",
+            "name_en": "Comprehend Languages"
+          },
+          {
+            "name_cn": "油腻术",
+            "name_en": "Detect Magic"
+          },
+          {
+            "name_cn": "鉴定术",
+            "name_en": "Disguise Self"
+          },
+          {
+            "name_cn": "跳跃术",
+            "name_en": "Expeditious Retreat"
+          },
+          {
+            "name_cn": "魔法",
+            "name_en": "False Life"
+          },
+          {
+            "name_cn": "护盾术",
+            "name_en": "Feather Fall"
+          },
+          {
+            "name_cn": "睡眠术",
+            "name_en": "Find Familiar"
+          },
+          {
+            "name_cn": "塔莎狂笑术",
+            "name_en": "Fog Cloud"
+          },
+          {
+            "name_cn": "谭森浮碟术",
+            "name_en": "Grease"
+          },
+          {
+            "name_cn": "雷鸣波",
+            "name_en": "Identify"
+          },
+          {
+            "name_cn": "巫术箭",
+            "name_en": "Illusory Script"
+          }
+        ]
+      },
+      {
+        "level": "2环",
+        "spells": [
+          {
+            "name_cn": "变身术",
+            "name_en": "Alter Self"
+          },
+          {
+            "name_cn": "秘法",
+            "name_en": "Arcane Lock"
+          },
+          {
+            "name_cn": "/耳聋术",
+            "name_en": "Blindness"
+          },
+          {
+            "name_cn": "朦胧术",
+            "name_en": "Deafness"
+          },
+          {
+            "name_cn": "黑暗术",
+            "name_en": "Blur"
+          },
+          {
+            "name_cn": "/缩小术",
+            "name_en": "Cloud"
+          },
+          {
+            "name_cn": "炽焰法",
+            "name_en": "Daggers"
+          },
+          {
+            "name_cn": "造风术",
+            "name_en": "Continual Flame"
+          },
+          {
+            "name_cn": "人类定身术",
+            "name_en": "Crown"
+          },
+          {
+            "name_cn": "隐形术",
+            "name_en": "Madness"
+          },
+          {
+            "name_cn": "敲击术",
+            "name_en": "Darkness"
+          },
+          {
+            "name_cn": "浮空术",
+            "name_en": "Darkvision"
+          },
+          {
+            "name_cn": "物件定位术",
+            "name_en": "Detect Thoughts"
+          },
+          {
+            "name_cn": "魔嘴术",
+            "name_en": "Enlarge"
+          },
+          {
+            "name_cn": "马友夫强酸箭",
+            "name_en": "Reduce"
+          },
+          {
+            "name_cn": "镜影术",
+            "name_en": "Flaming Sphere"
+          },
+          {
+            "name_cn": "涅斯图魔法灵光",
+            "name_en": "Gentle Repose"
+          },
+          {
+            "name_cn": "魔绳术",
+            "name_en": "Gust"
+          },
+          {
+            "name_cn": "粉碎音波",
+            "name_en": "Wind"
+          },
+          {
+            "name_cn": "蛛行术",
+            "name_en": "Hold Person"
+          },
+          {
+            "name_cn": "暗示术",
+            "name_en": "Invisibility"
+          },
+          {
+            "name_cn": "蛛网术",
+            "name_en": "Knock"
+          }
+        ]
+      },
+      {
+        "level": "3环",
+        "spells": [
+          {
+            "name_cn": "降咒",
+            "name_en": "Animate Dead"
+          },
+          {
+            "name_cn": "闪现术",
+            "name_en": "Bestow Curse"
+          },
+          {
+            "name_cn": "鹰眼术",
+            "name_en": "Blink"
+          },
+          {
+            "name_cn": "法术",
+            "name_en": "Clairvoyance"
+          },
+          {
+            "name_cn": "解除魔法",
+            "name_en": "Counterspell"
+          },
+          {
+            "name_cn": "恐惧术",
+            "name_en": "Dispel Magic"
+          },
+          {
+            "name_cn": "假死术",
+            "name_en": "Fear"
+          },
+          {
+            "name_cn": "火球术",
+            "name_en": "Feign Death"
+          },
+          {
+            "name_cn": "飞行术",
+            "name_en": "Fireball"
+          },
+          {
+            "name_cn": "加速术",
+            "name_en": "Fly"
+          },
+          {
+            "name_cn": "防护法阵",
+            "name_en": "Gaseous Form"
+          },
+          {
+            "name_cn": "防护能",
+            "name_en": "Glyph"
+          },
+          {
+            "name_cn": "移除诅咒",
+            "name_en": "Warding"
+          },
+          {
+            "name_cn": "短讯术",
+            "name_en": "Haste"
+          },
+          {
+            "name_cn": "缓慢术",
+            "name_en": "Hypnotic Pattern"
+          },
+          {
+            "name_cn": "臭云术",
+            "name_en": "Leomund"
+          },
+          {
+            "name_cn": "巧言术",
+            "name_en": "Tiny Hut"
+          },
+          {
+            "name_cn": "吸血鬼之触",
+            "name_en": "Lightning Bolt"
+          }
+        ]
+      },
+      {
+        "level": "4环",
+        "spells": [
+          {
+            "name_cn": "秘法",
+            "name_en": "Arcane Eye"
+          },
+          {
+            "name_cn": "放逐术",
+            "name_en": "Banishment"
+          },
+          {
+            "name_cn": "枯萎术",
+            "name_en": "Blight"
+          },
+          {
+            "name_cn": "困惑术",
+            "name_en": "Confusion"
+          },
+          {
+            "name_cn": "任意门",
+            "name_en": "Conjure Minor"
+          },
+          {
+            "name_cn": "艾伐黑触",
+            "name_en": "Elementals"
+          },
+          {
+            "name_cn": "火焰护盾",
+            "name_en": "Control Water"
+          },
+          {
+            "name_cn": "高等隐形术",
+            "name_en": "Dimension Door"
+          },
+          {
+            "name_cn": "生物定位术",
+            "name_en": "Evard"
+          },
+          {
+            "name_cn": "欧提路克弹力法",
+            "name_en": "Black Tentacles"
+          },
+          {
+            "name_cn": "变形术",
+            "name_en": "Fabricate"
+          },
+          {
+            "name_cn": "塑石术",
+            "name_en": "Fire Shield"
+          },
+          {
+            "name_cn": "石肤术",
+            "name_en": "Greater Invisibility"
+          },
+          {
+            "name_cn": "火墙术",
+            "name_en": "Hallucinatory Terrain"
+          }
+        ]
+      },
+      {
+        "level": "5环",
+        "spells": [
+          {
+            "name_cn": "死云术",
+            "name_en": "Animate Objects"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Bigby"
+          },
+          {
+            "name_cn": "造物术",
+            "name_en": "Hand"
+          },
+          {
+            "name_cn": "托梦术",
+            "name_en": "Cloudkill"
+          },
+          {
+            "name_cn": "指使术",
+            "name_en": "Cone"
+          },
+          {
+            "name_cn": "怪物定身术",
+            "name_en": "Cold"
+          },
+          {
+            "name_cn": "假象术",
+            "name_en": "Conjure Elemental"
+          },
+          {
+            "name_cn": "篡改记",
+            "name_en": "Contact Other Plane"
+          },
+          {
+            "name_cn": "穿墙术",
+            "name_en": "Creation"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Dominate Person"
+          },
+          {
+            "name_cn": "伪装术",
+            "name_en": "Dream"
+          },
+          {
+            "name_cn": "传送法阵",
+            "name_en": "Geas"
+          },
+          {
+            "name_cn": "力场墙",
+            "name_en": "Hold Monster"
+          },
+          {
+            "name_cn": "石墙术",
+            "name_en": "Legend Lore"
+          }
+        ]
+      },
+      {
+        "level": "6环",
+        "spells": [
+          {
+            "name_cn": "秘法门",
+            "name_en": "Arcane Gate"
+          },
+          {
+            "name_cn": "死亡法阵",
+            "name_en": "Chain Lightning"
+          },
+          {
+            "name_cn": "触发术",
+            "name_en": "Circle"
+          },
+          {
+            "name_cn": "解离术",
+            "name_en": "Death"
+          },
+          {
+            "name_cn": "摄心目光",
+            "name_en": "Contingency"
+          },
+          {
+            "name_cn": "石化术",
+            "name_en": "Create Undead"
+          },
+          {
+            "name_cn": "法术无效结界",
+            "name_en": "Disintegrate"
+          },
+          {
+            "name_cn": "铜墙",
+            "name_en": "Drawmij"
+          },
+          {
+            "name_cn": "群体暗示术",
+            "name_en": "Instant"
+          },
+          {
+            "name_cn": "地动术",
+            "name_en": "Summons"
+          },
+          {
+            "name_cn": "欧提路克冰封法",
+            "name_en": "Eyebite"
+          },
+          {
+            "name_cn": "真知术",
+            "name_en": "Flesh"
+          },
+          {
+            "name_cn": "冰墙术",
+            "name_en": "Stone"
+          }
+        ]
+      },
+      {
+        "level": "7环",
+        "spells": [
+          {
+            "name_cn": "摩登肯豪宅术",
+            "name_en": "Delayed Blast"
+          },
+          {
+            "name_cn": "异界",
+            "name_en": "Fireball"
+          },
+          {
+            "name_cn": "虹光",
+            "name_en": "Etherealness"
+          },
+          {
+            "name_cn": "投影术",
+            "name_en": "Finger"
+          },
+          {
+            "name_cn": "隔离术",
+            "name_en": "Death"
+          },
+          {
+            "name_cn": "拟像术",
+            "name_en": "Forcecage"
+          },
+          {
+            "name_cn": "魔法徽记",
+            "name_en": "Mirage Arcan"
+          },
+          {
+            "name_cn": "传送术",
+            "name_en": "Mordenkainen"
+          }
+        ]
+      },
+      {
+        "level": "8环",
+        "spells": [
+          {
+            "name_cn": "反魔法",
+            "name_en": "Antimagic Field"
+          },
+          {
+            "name_cn": "/关怀术",
+            "name_en": "Antipathy"
+          },
+          {
+            "name_cn": "克隆术",
+            "name_en": "Sympathy"
+          },
+          {
+            "name_cn": "弱智术",
+            "name_en": "Clone"
+          },
+          {
+            "name_cn": "焚云术",
+            "name_en": "Control Weather"
+          },
+          {
+            "name_cn": "迷宫术",
+            "name_en": "Demiplane"
+          }
+        ]
+      },
+      {
+        "level": "9环",
+        "spells": [
+          {
+            "name_cn": "星界",
+            "name_en": "Astral Projection"
+          },
+          {
+            "name_cn": "预警术",
+            "name_en": "Foresight"
+          },
+          {
+            "name_cn": "异界之门",
+            "name_en": "Gate"
+          },
+          {
+            "name_cn": "禁锢术",
+            "name_en": "Imprisonment"
+          },
+          {
+            "name_cn": "虹光法墙",
+            "name_en": "Meteor Swarm"
+          },
+          {
+            "name_cn": "完全变形术",
+            "name_en": "Power Word Kill"
+          },
+          {
+            "name_cn": "祈愿术",
+            "name_en": "Prismatic Wall"
+          }
+        ]
+      }
+    ]
+  }
+]
