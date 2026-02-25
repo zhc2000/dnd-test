@@ -474,7 +474,7 @@
                     <label for="level-search">环阶</label>
                     <select id="level-search">
                         <option value="">全部环阶</option>
-                        <option value="cantrip">戏法</option>
+                        <option value="戏法">戏法</option>
                         <option value="1环">1环</option>
                         <option value="2环">2环</option>
                         <option value="3环">3环</option>
@@ -661,8 +661,8 @@
                 
                 // 确定环阶标签类名
                 let levelClass = '';
-                if (spell.level === 'cantrip') {
-                    levelClass = 'cantrip';
+                if (spell.level === '戏法') {
+                    levelClass = '戏法';
                 } else {
                     levelClass = `level-${spell.level}`;
                 }
@@ -673,7 +673,7 @@
                 card.innerHTML = `
                     <div class="spell-header">
                         <div class="spell-name">${spell.name_cn}</div>
-                        <div class="spell-level"><span class="level-tag ${levelClass}">${spell.level === 'cantrip' ? '戏法' : spell.level + '环'}</span></div>
+                        <div class="spell-level"><span class="level-tag ${levelClass}">${spell.level === '戏法' ? '戏法' : spell.level }</span></div>
                     </div>
                     <div class="spell-body">
                         <div class="spell-meta">
@@ -769,7 +769,7 @@
             modalTitle.textContent = spell.name_cn;
             modalSchool.textContent = spell.school;
             modalClasses.textContent = spell.classes.join('、') || '无';
-            modalLevel.textContent = spell.level === 'cantrip' ? '戏法' : `${spell.level}环`;
+            modalLevel.textContent = spell.level === 'cantrip' ? '戏法' : `${spell.level}`;
             modalCastingTime.textContent = spell.casting_time;
             modalRange.textContent = spell.range;
             modalDescription.textContent = spell.description;
