@@ -2,7 +2,7 @@
   {
     "name_cn": "酸液飞溅",
     "name_en": "Acid Splash",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -405,7 +405,7 @@
   {
     "name_cn": "剑刃防护",
     "name_en": "Blade Ward",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -569,12 +569,12 @@
     "components": "V，S",
     "duration": "1小时",
     "description": "你尝试魅惑施法距离内的某个你能看见的类人生物。该生\n物必须进行一次感知豁免。如果你或你的同伴正在和该生物战\n斗，则该生物进行该豁免时具有优势。如果豁免失败，则该生\n物被你魅惑至法术终止，或者直到你或你的同伴对他做出伤害\n行为为止。此间，被魅惑的生物将视你为友 方且熟悉的人。法\n术终止后，该生物 将会发觉曾被你魅惑过。",
-    "higher_level": "使用的法术位每比 1环高一环，法术就能多影响一个目标。而"
+    "higher_level": "使用的法术位每比 1环高一环，法术就能多影响一个目标。而各目标之间距离不能超过 30尺。  "
   },
   {
-    "name_cn": "各目标之间距离不能超过 30尺。  冻寒之触",
+    "name_cn": "冻寒之触",
     "name_en": "Chill Touch",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -1094,7 +1094,7 @@
   {
     "name_cn": "舞光术",
     "name_en": "Dancing Lights",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -1432,7 +1432,7 @@
   {
     "name_cn": "德鲁伊伎俩",
     "name_en": "Druidcraf",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -1458,7 +1458,7 @@
   {
     "name_cn": "魔能爆",
     "name_en": "Eldritch Blast",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -1705,7 +1705,7 @@
   {
     "name_cn": "火焰箭",
     "name_en": "Fire",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -1874,7 +1874,7 @@
   {
     "name_cn": "交友术",
     "name_en": "Friend",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -2082,7 +2082,7 @@
   {
     "name_cn": "神导术",
     "name_en": "Guidance",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -2550,7 +2550,7 @@
   {
     "name_cn": "光亮术",
     "name_en": "Light",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -2654,7 +2654,7 @@
   {
     "name_cn": "法师之手",
     "name_en": "Mage Hand",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -2831,12 +2831,12 @@
     "components": "V、S、M（磨碎的大黄叶和一只蝰蛇的胃囊）",
     "duration": "立即",
     "description": "一支闪烁的绿色箭矢疾速的飞向一个施法距离内的目标，\n并爆散成强酸水雾。法术对目标发动一次远程法术攻击。若命\n中，则目标立即受到 4d4点强酸伤害，并在其下一回合结束时\n再受到 2d4点强酸伤害。 若未命中， 则酸液箭矢溅射到了目标，\n造成初始伤害一半的伤害，并且不会在下一回合结束时造成伤\n害。",
-    "higher_level": "使用的法术位每比 2环高一环，其初始伤害和后续伤害就各增"
+    "higher_level": "使用的法术位每比 2环高一环，其初始伤害和后续伤害就各增加1d4。 "
   },
   {
-    "name_cn": "加1d4。 修复术",
+    "name_cn": "修复术",
     "name_en": "Mending",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1分钟",
@@ -2849,7 +2849,7 @@
   {
     "name_cn": "传讯术",
     "name_en": "Message",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -2888,7 +2888,7 @@
   {
     "name_cn": "次级幻影",
     "name_en": "Minor Illusion",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3224,9 +3224,9 @@
     "higher_level": ""
   },
   {
-    "name_cn": "毒气喷溅Poison",
-    "name_en": "Spray",
-    "level": null,
+    "name_cn": "毒气喷溅",
+    "name_en": "Poison Spray",
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3304,7 +3304,7 @@
   {
     "name_cn": "魔法伎俩",
     "name_en": "Prestidigitation",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3343,7 +3343,7 @@
   {
     "name_cn": "燃火术",
     "name_en": "Produce Flame",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3473,7 +3473,7 @@
   {
     "name_cn": "冷冻射线",
     "name_en": "Ray",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3538,7 +3538,7 @@
   {
     "name_cn": "提升抗性",
     "name_en": "Resistance",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3603,7 +3603,7 @@
   {
     "name_cn": "圣火术",
     "name_en": "Sacred Flame",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3772,7 +3772,7 @@
   {
     "name_cn": "橡棍术",
     "name_en": "Shillelagh",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1附赠动作",
@@ -3785,7 +3785,7 @@
   {
     "name_cn": "电爪",
     "name_en": "Shocking Grasp",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -3876,7 +3876,7 @@
   {
     "name_cn": "维生术",
     "name_en": "Spare",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -4188,7 +4188,7 @@
   {
     "name_cn": "奇术",
     "name_en": "Thaumaturgy",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -4201,7 +4201,7 @@
   {
     "name_cn": "荆棘之鞭",
     "name_en": "Thorn Whip",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -4331,7 +4331,7 @@
   {
     "name_cn": "克敌机先",
     "name_en": "True Strike",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -4383,7 +4383,7 @@
   {
     "name_cn": "恶言相加",
     "name_en": "Vicious Mockery",
-    "level": null,
+    "level": "戏法",
     "school": null,
     "ritual": false,
     "casting_time": "1动作",
@@ -4612,6 +4612,32 @@
     "components": "V、S",
     "duration": "10分钟",
     "description": "你创造一个抵御谎言的魔法区域，该区域以施法距离内一\n点为中心，覆盖该点周边 15尺半径的球状区域。在法术终止\n前，生物在其回合内第一次进入该区域，或在该区域内开始其\n回合时，必须进行一次魅力豁免。豁免失败者在该区域内不能\n故意说谎。而你可以知晓每个受术生物的豁免是成功与否。\n受影响的生物可以意识到该效果的存在，因此它可以主动\n回避回答那些通常会以谎言答复的问题。该生物在回答问题时\n可以闪烁其词、避重就轻，但只要不超出实话的范围就没有问\n题。",
+    "higher_level": ""
+  },
+  {
+    "name_cn": "舟哥的律法真言",
+    "name_en": "Zhou's bibi",
+    "level": "戏法",
+    "school": "咒法",
+    "ritual": false,
+    "casting_time": "1动作/1反应",
+    "range": "30尺",
+    "components": "V、S、M（一部法典）",
+    "duration": "立即",
+    "description": "你手持法典指向施法范围内任意一个生物，口诵律政之言，法力凝结的字符喷涌而出，目标生物必须进行一次智力豁免。如果豁免失败，则受到施法者在三秒内说出字符的数量*(1/(1d4)*2)的伤害，并陷入恐慌；若豁免成功则受到1d4的钝击伤害。",
+    "higher_level": ""
+  },
+  {
+    "name_cn": "阎之科研",
+    "name_en": "Yan's Gate",
+    "level": "戏法",
+    "school": "防护",
+    "ritual": false,
+    "casting_time": "1附赠动作",
+    "range": "10尺",
+    "components": "V、M（一小段金属丝）",
+    "duration": "1分钟",
+    "description": "你以施法距离内一点为中心创造出一个简易门电路并影响半径10尺的空间受到某种规则影响。投掷一个1d6骰子并对其结果/2，最终结果1、2、3分别代表与、或、非门。\n与门：全部友方获得近战攻击优势。\n或门：全部单位抵消优势/劣势。 \n非门：全部敌方攻击劣势。",
     "higher_level": ""
   }
 ]
