@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>高级人物创建器</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<h2>🎲 D&D 5e 人物创建器</h2>
+
+<div class="form-group">
+  <label>角色名称：</label>
+  <input type="text" id="charName" placeholder="如：阿拉贡" />
+</div>
+<div class="form-group">
+  <label>玩家姓名：</label>
+  <input type="text" id="playerName" placeholder="你的名字" />
+</div>
+<div class="form-group">
+  <label>种族：</label>
+  <select id="raceSelect"></select>
+</div>
+<div class="form-group">
+  <label>职业：</label>
+  <select id="occSelect"></select>
+</div>
+<div class="form-group">
+  <label>等级：</label>
+  <select id="levelSelect">
+    <!-- 1~20 -->
+    <script>
+      for (let i = 1; i <= 20; i++) {
+        document.write(`<option value="${i}">${i}</option>`);
+      }
+    </script>
+  </select>
+</div>
+
+<button onclick="rollAbilities()">🎲 掷骰生成六维属性</button>
+
+<div id="abilitiesSection" style="display:none;">
+
+  <h3>可用属性值（拖拽到下方槽位）</h3>
+  <div id="rolledContainer" class="rolled-abilities"></div>
+
+  <h3>分配属性</h3>
+  <div class="ability-slots">
+    <!-- 动态生成 -->
+    <script>
+      document.write(
+        abilityNames.map((name, i) => `
+          <div class="ability-slot" id="slot-${i}">
+            <span class="name">${name}</span>
+            <span class="value">?</span>
+            <span class="modifier"></span>
+            <button onclick="applyRacialBonus()" 
+              ${i === 0 ? '' : 'style="display:none"'}>应用种族加值</button>
+          </div>
+        `).join('')
+      );
+    </script>
+  </div>
+
+  <div style="margin-top: 15px;">
+    <button onclick="generateCharacter()">✅ 生成角色</button>
+  </div>
+</div>
+
+<!-- 结果展示 -->
+<div id="result" class="result">
+  <h3>🎉 角色创建成功！</h3>
+  <pre id="resultJson"></pre>
+  <button onclick="exportCharacter()">💾 导出为 JSON</button>
+</div>
+
+<script src="character_creator.js"></script>
+</body>
+</html>
