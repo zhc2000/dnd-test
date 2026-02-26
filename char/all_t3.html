@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ DND 5e 人物创建器</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+      background-image: url('https://images.unsplash.com/photo-1553877619-7a4b3d2f8a5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.93);
+      backdrop-filter: blur(6px);
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 24px;
+      color: #2c3e50;
+      font-size: 28px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin: 20px 0 12px;
+      color: #3498db;
+      font-size: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin: 14px 0;
+    }
+    .form-group label {
+      width: 100px;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+    .form-group input,
+    .form-group select {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+    }
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    }
+
+    button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      transition: all 0.2s;
+      display: inline-block;
+      margin: 8px 4px;
+    }
+    button:hover:not(:disabled) {
+      background: #2980b9;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    button:disabled {
+      background: #bdc3c7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .rolled-abilities {
+      display: flex;
+      gap: 12px;
+      margin: 16px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .ability-token {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      border: 2px dashed #64b5f6;
+      padding: 12px 16px;
+      border-radius: 10px;
+      user-select: none;
+      font-weight: bold;
+      font-size: 18px;
+      min-width: 50px;
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .ability-token.selected {
+      border-style: solid;
+      border-color: #e91e63;
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(233, 30, 99, 0.3);
+    }
+
+    .ability-slots {
+      margin-top: 20px;
+    }
+    .ability-slot {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+      background: #f8f9fa;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #e0e0e0;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .ability-slot.filled {
+      background: #e8f5e9;
+      border-color: #81c784;
+    }
+    .ability-slot.highlight {
+      background: #fff8e1;
+      border-color: #ffc107;
+      box-shadow: 0 2px 6px rgba(255, 193, 7, 0.4);
+    }
+    .ability-slot .name {
+      width: 80px;
+      font-weight: 700;
+      color: #2c3e50;
+    }
+    .ability-slot .value {
+      min-width: 50px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+    .ability-slot .modifier {
+      margin-left: 12px;
+      color: #7f8c8d;
+      font-size: 16px;
+    }
+
+    /* =============== 角色卡样式 =============== */
+    #characterCard {
+      display: none;
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #characterCard h2 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 16px;
+    }
+    .card-row {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+    .card-label {
+      font-weight: bold;
+      color: #34495e;
+    }
+    .card-value {
+      color: #2c3e50;
+    }
+    .abilities-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .ability-box {
+      text-align: center;
+      padding: 10px;
+      background: #f1f8e9;
+      border-radius: 8px;
+    }
+    .ability-name {
+      font-size: 14px;
+      color: #555;
+    }
+    .ability-score {
+      font-size: 24px;
+      font-weight: bold;
+      color: #27ae60;
+    }
+    .ability-mod {
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 16px; }
+      .form-group { flex-direction: column; align-items: stretch; }
+      .form-group label { margin-bottom: 6px; }
+      .rolled-abilities { justify-content: center; }
+      .abilities-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>✨ D&D 5e 人物创建器</h1>
+
+  <div class="form-group">
+    <label>角色名称：</label>
+    <input type="text" id="charName" placeholder="如：甘道夫" />
+  </div>
+  <div class="form-group">
+    <label>玩家姓名：</label>
+    <input type="text" id="playerName" placeholder="你的名字" />
+  </div>
+  <div class="form-group">
+    <label>种族：</label>
+    <select id="raceSelect">
+      <option value="">-- 加载中 --</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>职业：</label>
+    <select id="occSelect">
+      <option value="">-- 加载中 --</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>等级：</label>
+    <select id="levelSelect">
+      <script>
+        for (let i = 1; i <= 20; i++) document.write(`<option value="${i}">${i}</option>`);
+      </script>
+    </select>
+  </div>
+
+  <button onclick="rollAbilities()">🎲 掷骰生成六维属性</button>
+
+  <div id="abilitiesSection" style="display:none;">
+    <h2>可用属性值（点击选择，再点槽位分配）</h2>
+    <div id="rolledContainer" class="rolled-abilities"></div>
+
+    <h2>分配属性（点击空槽位）</h2>
+    <div class="ability-slots" id="abilitySlots"></div>
+
+    <button onclick="applyRacialBonus()" id="bonusBtn">🌟 应用种族加值</button>
+    <button onclick="generateCharacter()">✅ 生成角色</button>
+  </div>
+
+  <!-- 精美角色卡 -->
+  <div id="characterCard">
+    <h2 id="cardCharName">角色名</h2>
+    <div class="card-row">
+      <span class="card-label">玩家：</span>
+      <span class="card-value" id="cardPlayerName"></span>
+    </div>
+    <div class="card-row">
+      <span class="card-label">种族 / 职业 / 等级：</span>
+      <span class="card-value" id="cardRaceClassLevel"></span>
+    </div>
+    <div class="card-row">
+      <span class="card-label">体型 / 速度：</span>
+      <span class="card-value" id="cardSizeSpeed"></span>
+    </div>
+    <div class="card-row">
+      <span class="card-label">生命值（HP）：</span>
+      <span class="card-value" id="cardHP"></span>
+    </div>
+    <div class="card-row" style="font-size:14px;color:#7f8c8d;">
+      <span>（含体质调整值）</span>
+    </div>
+
+    <h3 style="margin-top: 20px;">属性</h3>
+    <div class="abilities-grid" id="cardAbilitiesGrid"></div>
+
+    <div style="margin-top: 20px; text-align: center;">
+      <button onclick="saveCharacterCardAsImage()">🖼️ 保存角色卡为图片</button>
+    </div>
+  </div>
+</div>
+
+<!-- 引入 html2canvas -->
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+<script>
+// ================== 数据类 ==================
+class Race {
+  constructor(name, size, speed) {
+    this.name = name;
+    this.size = size;
+    this.speed = parseInt(speed);
+  }
+}
+class Occupation {
+  constructor(name, hitDieSize) {
+    this.name = name;
+    this.hitDieSize = parseInt(hitDieSize);
+  }
+}
+
+// ================== 全局状态 ==================
+let races = [];
+let occupations = [];
+let rolledAbilities = [];
+let assigned = [null, null, null, null, null, null];
+let racialBonusApplied = false;
+const abilityNames = ['力量', '敏捷', '体质', '智力', '感知', '魅力'];
+let selectedAbilityId = null; // 当前选中的属性 ID
+
+// ================== 初始化 ==================
+window.onload = () => {
+  const mockRaceData = `人类 中型 30
+矮人 中型 25
+半身人 小型 25
+半精灵 中型 30
+精灵 中型 30
+龙裔 中型 30
+半兽人 中型 30
+提夫林 中型 30`;
+  const mockOccData = `战士 10
+吟游诗人 8
+野蛮人 12
+法师 6
+术士 6
+圣武士 10
+游侠 10
+邪术师 8
+游荡者 8
+武僧 8`;
+
+  races = mockRaceData.trim().split('\n').map(line => {
+    const [name, size, speed] = line.split(' ');
+    return new Race(name, size, speed);
+  });
+  occupations = mockOccData.trim().split('\n').map(line => {
+    const [name, hd] = line.split(' ');
+    return new Occupation(name, hd);
+  });
+
+  populateSelects();
+  renderAbilitySlots();
+};
+
+function populateSelects() {
+  const raceSel = document.getElementById('raceSelect');
+  const occSel = document.getElementById('occSelect');
+  raceSel.innerHTML = '<option value="">-- 请选择 --</option>';
+  occSel.innerHTML = '<option value="">-- 请选择 --</option>';
+
+  races.forEach(r => {
+    const opt = document.createElement('option');
+    opt.value = r.name;
+    opt.textContent = r.name;
+    raceSel.appendChild(opt);
+  });
+  occupations.forEach(o => {
+    const opt = document.createElement('option');
+    opt.value = o.name;
+    opt.textContent = o.name;
+    occSel.appendChild(opt);
+  });
+}
+
+function renderAbilitySlots() {
+  const container = document.getElementById('abilitySlots');
+  container.innerHTML = '';
+  abilityNames.forEach((name, i) => {
+    const slot = document.createElement('div');
+    slot.className = 'ability-slot';
+    slot.dataset.index = i;
+    slot.innerHTML = `
+      <span class="name">${name}</span>
+      <span class="value">?</span>
+      <span class="modifier"></span>
+    `;
+    slot.addEventListener('click', () => assignToSlot(i));
+    container.appendChild(slot);
+  });
+}
+
+// ================== 掷骰 ==================
+function roll4d6DropLowest() {
+  const rolls = Array.from({ length: 4 }, () => Math.floor(Math.random() * 6) + 1);
+  return rolls.sort((a, b) => a - b).slice(1).reduce((a, b) => a + b, 0);
+}
+
+function rollAbilities() {
+  rolledAbilities = Array.from({ length: 6 }, (_, idx) => ({
+    id: idx,
+    value: roll4d6DropLowest()
+  }));
+  renderRolledAbilities();
+  document.getElementById('abilitiesSection').style.display = 'block';
+  assigned = [null, null, null, null, null, null];
+  racialBonusApplied = false;
+  selectedAbilityId = null;
+  updateAssignUI();
+}
+
+function renderRolledAbilities() {
+  const container = document.getElementById('rolledContainer');
+  container.innerHTML = '';
+  rolledAbilities.forEach(item => {
+    const token = document.createElement('div');
+    token.className = 'ability-token';
+    token.textContent = item.value;
+    token.dataset.id = item.id;
+
+    token.addEventListener('click', () => {
+      // 取消之前选中
+      document.querySelectorAll('.ability-token.selected').forEach(el => el.classList.remove('selected'));
+      // 选中当前
+      token.classList.add('selected');
+      selectedAbilityId = item.id;
+    });
+
+    container.appendChild(token);
+  });
+}
+
+// ================== 分配逻辑（统一处理）==================
+function assignToSlot(slotIndex) {
+  if (selectedAbilityId === null) {
+    // 未选择属性值，不操作
+    return;
+  }
+
+  // 检查该属性是否已被使用
+  const alreadyUsed = assigned.some(a => a && a.id === selectedAbilityId);
+  if (alreadyUsed && assigned[slotIndex]?.id !== selectedAbilityId) {
+    alert('该属性值已被分配到其他位置！');
+    return;
+  }
+
+  // 如果槽位已有值，先清空它（允许重新分配）
+  if (assigned[slotIndex]) {
+    // 不需要额外操作，直接覆盖
+  }
+
+  // 找到选中的属性值
+  const selectedItem = rolledAbilities.find(x => x.id === selectedAbilityId);
+  if (!selectedItem) return;
+
+  // 分配
+  assigned[slotIndex] = selectedItem;
+
+  // 清除选中状态
+  selectedAbilityId = null;
+  document.querySelectorAll('.ability-token.selected').forEach(el => el.classList.remove('selected'));
+
+  updateAssignUI();
+}
+
+// ================== 工具函数 ==================
+function calcModifier(score) {
+  if (score >= 10) return Math.floor((score - 10) / 2);
+  else return -Math.ceil((10 - score) / 2);
+}
+
+function updateAssignUI() {
+  for (let i = 0; i < 6; i++) {
+    const slot = document.querySelector(`.ability-slot[data-index="${i}"]`);
+    const valueEl = slot.querySelector('.value');
+    const modEl = slot.querySelector('.modifier');
+
+    if (assigned[i] !== null) {
+      const val = assigned[i].value;
+      valueEl.textContent = val;
+      const mod = calcModifier(val);
+      modEl.textContent = mod >= 0 ? `(+${mod})` : `(${mod})`;
+      slot.classList.add('filled');
+    } else {
+      valueEl.textContent = '?';
+      modEl.textContent = '';
+      slot.classList.remove('filled');
+    }
+  }
+
+  const bonusBtn = document.getElementById('bonusBtn');
+  bonusBtn.disabled = racialBonusApplied || assigned.some(v => v === null);
+}
+
+// ================== 种族加值 ==================
+function applyRacialBonus() {
+  const raceName = document.getElementById('raceSelect').value;
+  const race = races.find(r => r.name === raceName);
+  if (!race) {
+    alert('请选择有效种族！');
+    return;
+  }
+  if (assigned.some(v => v === null)) {
+    alert('请先完成所有属性分配！');
+    return;
+  }
+
+  const isHuman = race.name === '人类';
+  if (isHuman) {
+    for (let i = 0; i < 6; i++) assigned[i] = { ...assigned[i], value: assigned[i].value + 1 };
+  } else {
+    const plus2Idx = prompt(`请选择要+2的属性（0-5）:\n0=力量,1=敏捷,2=体质,3=智力,4=感知,5=魅力`);
+    const plus1Idx = prompt(`请选择要+1的属性（0-5，不能与+2相同）`);
+    if (plus2Idx === null || plus1Idx === null) return;
+
+    const p2 = parseInt(plus2Idx), p1 = parseInt(plus1Idx);
+    if (isNaN(p2) || isNaN(p1) || p2 < 0 || p2 > 5 || p1 < 0 || p1 > 5 || p2 === p1) {
+      alert('输入无效！');
+      return;
+    }
+    assigned[p2] = { ...assigned[p2], value: assigned[p2].value + 2 };
+    assigned[p1] = { ...assigned[p1], value: assigned[p1].value + 1 };
+  }
+
+  racialBonusApplied = true;
+  updateAssignUI();
+  alert('✅ 种族加值已应用！');
+}
+
+// ================== HP 计算（D&D 5e 规则）==================
+function calculateHitPoints(occupation, level, conModifier) {
+  let total = 0;
+  total += occupation.hitDieSize + conModifier; // 1级满值
+  for (let lvl = 2; lvl <= level; lvl++) {
+    const roll = Math.floor(Math.random() * occupation.hitDieSize) + 1;
+    total += roll + conModifier;
+  }
+  return Math.max(1, total);
+}
+
+// ================== 生成角色卡 ==================
+function generateCharacter() {
+  if (assigned.some(v => v === null)) {
+    alert('请完成属性分配！');
+    return;
+  }
+  if (!racialBonusApplied) {
+    alert('请先应用种族加值！');
+    return;
+  }
+
+  const name = document.getElementById('charName').value.trim();
+  const playerName = document.getElementById('playerName').value.trim();
+  const raceName = document.getElementById('raceSelect').value;
+  const occName = document.getElementById('occSelect').value;
+  const level = parseInt(document.getElementById('levelSelect').value);
+
+  if (!name || !playerName || !raceName || !occName) {
+    alert('请填写所有字段！');
+    return;
+  }
+
+  const race = races.find(r => r.name === raceName);
+  const occ = occupations.find(o => o.name === occName);
+  const abilityValues = assigned.map(a => a.value);
+  const conMod = calcModifier(abilityValues[2]);
+
+  const hp = calculateHitPoints(occ, level, conMod);
+
+  document.getElementById('cardCharName').textContent = name;
+  document.getElementById('cardPlayerName').textContent = playerName;
+  document.getElementById('cardRaceClassLevel').textContent = `${race.name} / ${occ.name} / ${level}级`;
+  document.getElementById('cardSizeSpeed').textContent = `${race.size} / ${race.speed}尺`;
+  document.getElementById('cardHP').textContent = `${hp} HP`;
+
+  const grid = document.getElementById('cardAbilitiesGrid');
+  grid.innerHTML = '';
+  abilityNames.forEach((name, i) => {
+    const box = document.createElement('div');
+    box.className = 'ability-box';
+    const mod = calcModifier(abilityValues[i]);
+    box.innerHTML = `
+      <div class="ability-name">${name}</div>
+      <div class="ability-score">${abilityValues[i]}</div>
+      <div class="ability-mod">${mod >= 0 ? '+' + mod : mod}</div>
+    `;
+    grid.appendChild(box);
+  });
+
+  document.getElementById('characterCard').style.display = 'block';
+  document.getElementById('characterCard').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ================== 保存为图片 ==================
+function saveCharacterCardAsImage() {
+  const card = document.getElementById('characterCard');
+  html2canvas(card, {
+    backgroundColor: '#ffffff',
+    scale: 2,
+    useCORS: true
+  }).then(canvas => {
+    const link = document.createElement('a');
+    link.download = `${document.getElementById('charName').value || 'character'}_card.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+}
+</script>
+
+</body>
+</html>
