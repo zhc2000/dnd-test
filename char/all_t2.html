@@ -331,14 +331,22 @@ const abilityNames = ['力量', '敏捷', '体质', '智力', '感知', '魅力'
 // ================== 初始化 ==================
 window.onload = () => {
   const mockRaceData = `人类 中型 30
-精灵 中型 30
 矮人 中型 25
 半身人 小型 25
-龙裔 中型 30`;
+半精灵 中型 30
+精灵 中型 30
+龙裔 中型 30
+半兽人 中型 30
+提夫林 中型 30`;
   const mockOccData = `战士 10
+吟游诗人 8
+野蛮人 12
 法师 6
+术士 6
+圣武士 10
+游侠 10
+邪术师 8
 游荡者 8
-牧师 8
 武僧 8`;
 
   races = mockRaceData.trim().split('\n').map(line => {
@@ -613,4 +621,5 @@ function saveCharacterCardAsImage() {
 </script>
 
 </body>
+
 </html>
